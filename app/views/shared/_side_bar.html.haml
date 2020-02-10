@@ -4,16 +4,18 @@
       %p.side-header__box__username
         = current_user.name
       %ul.side-header__box__menu
-        %li.side-header__edit__edit-user
-          = link_to "#" do
-            = icon('fas', 'edit')
         %li.side-header__edit__new-group
-          = link_to edit_user_path(current_user), class: 'side-header__edit__new-group' do
+          = link_to new_group_path(current_user),class: 'side-header__edit__new-group' do
+            = icon('fas', 'edit')
+        %li.side-header__edit__edit-user
+          = link_to edit_user_path(current_user), class: 'side-header__edit__nedit-user' do
             = icon('fas', 'cog')
   .side__groups
-    .group
-      %p.group__group-name
-        grouoname
-      %p.group__latest-message
-        hello
-  
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          %p.group__group-name
+            = group.name
+          %p.group__latest-message
+            メッセージはまだありません。
+    
