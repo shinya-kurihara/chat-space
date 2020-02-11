@@ -34,9 +34,9 @@
         li{
         margin-left: 5px;
         list-style: none;
-          a{
-          color:#ffffff;
-          }
+        a{
+        color:#ffffff;
+        }
         }
       }
     }
@@ -53,6 +53,10 @@
       }
       &__latest-message{
         font-size: 11px;
+      }
+      a{
+        color: #ffffff; 
+        text-decoration: none;
       }
     } 
   }
@@ -78,6 +82,10 @@
       &__member-list{
         font-size: 12px;
         color: #999999;
+        display: flex;
+        li{
+          margin-right: 5px;
+        }
       }
     }
     &__edit-btn{
@@ -124,7 +132,7 @@
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;   
-    .new-message{
+    form{
       display: flex;
       .input-box{
         width: 100%;
